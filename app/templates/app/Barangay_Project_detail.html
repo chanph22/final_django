@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="post-entry">
+        <h2><a href=" ">{{Barangay_Project.Project_Name}}</a> </h2>
+        <p>{{Barangay_Project.Project_Type}}</p></div>
+        <a href="{% url 'Barangay_Project_update' Barangay_Project.pk %}">Edit</a>
+        <a href="{% url 'Barangay_Project_delete' Barangay_Project.pk %}">Delete Project</a>
+
+{% endblock content %}

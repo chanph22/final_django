@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content%}
+    <a href="{% url 'Barangay_Service_create' %}"> New Service</a>
+<div class="nav-right"></div>
+  {% for Barangay_Service in Barangay_Services %}
+    <div class="post-entry">
+        <h2><a href="{% url 'Barangay_Service_detail' Barangay_Service.pk %}">{{Barangay_Service.Service_Type}}</a> </h2>
+
+    </div>
+  {% endfor %}
+{% endblock content%}

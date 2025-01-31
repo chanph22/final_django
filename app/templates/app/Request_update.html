@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+    <h1>Edit Request</h1>
+    <form action="{% url 'Request_update' object.pk %}" method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input class = "update" type="submit" value="Update">
+    </form>
+
+{% endblock content %}

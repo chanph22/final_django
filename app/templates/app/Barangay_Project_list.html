@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content%}
+    <a href="{% url 'Barangay_Project_create' %}"> New Project</a>
+<div class="nav-right"></div>
+  {% for Barangay_Project in Barangay_Projects %}
+    <div class="post-entry">
+        <h2><a href="{% url 'Barangay_Project_detail' Barangay_Project.pk %}">{{Barangay_Project.Project_Type}}</a> </h2>
+
+    </div>
+  {% endfor %}
+{% endblock content%}

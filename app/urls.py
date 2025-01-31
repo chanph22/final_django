@@ -1,0 +1,40 @@
+from  django.urls import path
+from .views import (HomePageView, AboutPageView, ContactPageView, Barangay_OfficialListView, Barangay_OfficialDetailView, Barangay_OfficialCreateView,
+                    Barangay_OfficialUpdateView, Barangay_OfficialDeleteView,
+                    Barangay_ProjectListView, Barangay_ProjectDetailView, Barangay_ProjectCreateView, Barangay_ProjectUpdateView, Barangay_ProjectDeleteView,
+                    ComplaintListView, ComplaintDetailView, ComplaintCreateView, ComplaintUpdateView, ComplaintDeleteView,
+                    Barangay_ServiceListView, Barangay_ServiceDetailView, Barangay_ServiceCreateView, Barangay_ServiceUpdateView, Barangay_ServiceDeleteView,
+                    RequestListView, RequestDetailView, RequestCreateView, RequestUpdateView, RequestDeleteView)
+
+
+urlpatterns = [
+    path('', HomePageView.as_view(), name='home'),
+    path('about', AboutPageView.as_view(), name='about'),
+    path('contact', ContactPageView.as_view(), name='contact'),
+    path('Barangay_Official/', Barangay_OfficialListView.as_view(), name='Barangay_Official'),
+    path('Barangay_Official/<int:pk>', Barangay_OfficialDetailView.as_view(), name='Barangay_Official_detail'),
+    path('Barangay_Official/create', Barangay_OfficialCreateView.as_view(), name='Barangay_Official_create'),
+    path('Barangay_Official/<int:pk>/edit', Barangay_OfficialUpdateView.as_view(), name='Barangay_Official_update'),
+    path('Barangay_Official/<int:pk>/delete', Barangay_OfficialDeleteView.as_view(), name='Barangay_Official_delete'),
+    path('Barangay_Project/', Barangay_ProjectListView.as_view(), name='Barangay_Project'),
+    path('Barangay_Project/<int:pk>', Barangay_ProjectDetailView.as_view(), name='Barangay_Project_detail'),
+    path('Barangay_Project/create', Barangay_ProjectCreateView.as_view(), name='Barangay_Project_create'),
+    path('Barangay_Project/<int:pk>/edit', Barangay_ProjectUpdateView.as_view(), name='Barangay_Project_update'),
+    path('Barangay_Project/<int:pk>/delete', Barangay_ProjectDeleteView.as_view(), name='Barangay_Project_delete'),
+    path('Complaint/', ComplaintListView.as_view(), name='Complaint'),
+    path('Complaint/<int:pk>', ComplaintDetailView.as_view(), name='Complaint_detail'),
+    path('Complaint/create', ComplaintCreateView.as_view(), name='Complaint_create'),
+    path('Complaint/<int:pk>/edit', ComplaintUpdateView.as_view(), name='Complaint_update'),
+    path('Complaint/<int:pk>/delete', ComplaintDeleteView.as_view(), name='Complaint_delete'),
+    path('Barangay_Service/', Barangay_ServiceListView.as_view(), name='Barangay_Service'),
+    path('Barangay_Service/<int:pk>', Barangay_ServiceDetailView.as_view(), name='Barangay_Service_detail'),
+    path('Barangay_Service/create', Barangay_ServiceCreateView.as_view(), name='Barangay_Service_create'),
+    path('Barangay_Service/<int:pk>/edit', Barangay_ServiceUpdateView.as_view(), name='Barangay_Service_update'),
+    path('Barangay_Service/<int:pk>/delete', Barangay_ServiceDeleteView.as_view(), name='Barangay_Service_delete'),
+    path('Request/', RequestListView.as_view(), name='Request'),
+    path('Request/<int:pk>', RequestDetailView.as_view(), name='Request_detail'),
+    path('Request/create', RequestCreateView.as_view(), name='Request_create'),
+    path('Request/<int:pk>/edit', RequestUpdateView.as_view(), name='Request_update'),
+    path('Request/<int:pk>/delete', RequestDeleteView.as_view(), name='Request_delete'),
+
+]

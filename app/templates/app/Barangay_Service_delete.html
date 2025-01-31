@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content%}
+    <h1>Delete Service </h1>
+    <form action="{% url 'Barangay_Service_delete' object.pk %}" method="post">
+      {% csrf_token %}
+      <p>Are you sure you want to delete" {{object.Service_Type}}" ?</p>
+      <input class="delete" type="submit" value="Confirm">
+    </form>
+
+{% endblock content%}

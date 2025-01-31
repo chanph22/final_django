@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="post-entry">
+        <h2><a href=" ">{{Request.Request_Type}}</a> </h2>
+        <p>Requested by : {{Request.Requested_by}}</p>
+        <a href="{% url 'Request_update' Request.pk %}">Edit</a>
+        <a href="{% url 'Request_delete' Request.pk %}">Delete Request</a>
+
+    </div>
+
+{% endblock content %}

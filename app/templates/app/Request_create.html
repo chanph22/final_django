@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content%}
+    <h1>New Request</h1>
+    <form action="{% url 'Request_create' %}" method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input class="create" type="submit" value="Save">
+    </form>
+
+{% endblock content%}

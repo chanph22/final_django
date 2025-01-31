@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content%}
+    <h1>Delete Barangay Official</h1>
+    <form action="{% url 'Barangay_Official_delete' object.pk %}" method="post">
+      {% csrf_token %}
+      <p>Are you sure you want to delete" {{object.Full_Name}} as {{object.Position}}" ?</p>
+      <input class="delete" type="submit" value="Confirm">
+    </form>
+
+{% endblock content%}

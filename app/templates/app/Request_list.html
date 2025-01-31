@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content%}
+    <a href="{% url 'Request_create' %}"> New Request</a>
+<div class="nav-right"></div>
+  {% for Request in Requests %}
+    <div class="post-entry">
+        <h2><a href="{% url 'Request_detail' Request.pk %}">{{Request.Request_Type}}</a> </h2>
+
+    </div>
+  {% endfor %}
+{% endblock content%}

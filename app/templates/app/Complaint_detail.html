@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="post-entry">
+        <h2><a href=" ">{{Complaint.Complaint_Type}}</a> </h2>
+        <p>Complainer : {{Complaint.Resident_Name}}</p>
+        <a href="{% url 'Complaint_update' Complaint.pk %}">Edit</a>
+        <a href="{% url 'Complaint_delete' Complaint.pk %}">Delete Complaint</a>
+
+    </div>
+
+{% endblock content %}

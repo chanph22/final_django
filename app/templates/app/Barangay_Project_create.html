@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content%}
+    <h1>New Project</h1>
+    <form action="{% url 'Barangay_Project_create' %}" method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input class="create" type="submit" value="Save">
+    </form>
+
+{% endblock content%}

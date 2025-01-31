@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="post-entry">
+        <h2><a href=" ">{{Barangay_Service.Service_Type}}</a> </h2>
+        <h3>Headed by : {{Barangay_Official.Position}}</h3>
+        <a href="{% url 'Barangay_Service_update' Barangay_Service.pk %}">Edit</a>
+        <a href="{% url 'Barangay_Service_delete' Barangay_Service.pk %}">Delete Service</a>
+
+    </div>
+
+{% endblock content %}

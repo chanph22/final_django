@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content%}
+    <a href="{% url 'Barangay_Official_create' %}"> New Barangay Official</a>
+<div class="nav-right"></div>
+  {% for Barangay_Official in Barangay_Officials %}
+    <div class="post-entry">
+        <h2><a href="{% url 'Barangay_Official_detail' Barangay_Official.pk %}">{{Barangay_Official.Position}}</a> </h2>
+
+    </div>
+  {% endfor %}
+{% endblock content%}
